@@ -1,0 +1,23 @@
+def fun(s):
+    lst1=[x for x in s]
+    lst2=[]
+    lst3=[]
+    
+    for x in range(len(lst1)):
+        if('0'<=lst1[x]<='9'):
+            return "Error"
+    
+    for x in range(len(lst1)):
+        if (lst1[x] not in lst2):
+            lst2.append(lst1[x])
+            a=lst2.index(lst1[x])+1
+            lst3.append(a)
+        else:
+            b=lst2.index(lst1[x])+1
+            lst3.append(b)
+    
+    p=''.join(str(x) for x in lst3)
+    return p
+    
+s=input()
+print(fun(s))
